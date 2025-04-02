@@ -20,12 +20,12 @@ public class CatRepository {
         jdbcTemplate.update(sql, cat.getOwner(), cat.getName(), cat.getRace(), cat.getAge());
     }
 
-    public Cat getCatFromID(int id) {
+    public Cat findByID(Cat cat) {
         String sql = "SELECT * FROM kat WHERE id = ?";
-        return jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<>(Cat.class), id);
+        return jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<>(Cat.class), cat.getId());
     }
 
-    public List<Cat> getAllCats() {
+    public List<Cat> findAll() {
         String sql = "SELECT id, owner, name, race, age FROM kat ORDER BY id DESC";
         return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Cat.class));
     }
@@ -35,8 +35,8 @@ public class CatRepository {
         jdbcTemplate.update(sql, cat.getOwner(), cat.getName(), cat.getRace(), cat.getAge());
     }
 
-    public void delete(int id) {
+    public void delete(Cat cat) {
         String sql = "DELETE FROM cat WHERE id = ?";
-        jdbcTemplate.update(sql, id);
+        jdbcTemplate.update(sql, cat.getId());
     }
 }
