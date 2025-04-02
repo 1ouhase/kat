@@ -8,6 +8,7 @@ public class KatApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(KatApplication.class, args);
+
     }
 
 }
