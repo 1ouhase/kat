@@ -7,6 +7,13 @@ public class Cat {
     private String race;
     private int age;
 
+    public Cat(int owner, String name, String race, int age) {
+        this.owner = owner;
+        this.name = name;
+        this.race = race;
+        this.age = age;
+    }
+
     public int getId() {
         return id;
     }

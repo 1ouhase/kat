@@ -178,6 +178,12 @@
     cursor: pointer;
     box-shadow: 2px 4px 4px rgb(0, 0, 0, 0.5);
 }
+.admin a{
+    margin: 0px 5px;
+    padding: 10px 20px;
+    margin-left: 15%;
+    cursor: pointer;
+}
 body {
     font-family: Arial, sans-serif;
     background-color: #34495e;

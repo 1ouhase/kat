@@ -1,8 +1,12 @@
 package net.iouhase.kat.controller;
 
+import net.iouhase.kat.model.User;
 import net.iouhase.kat.usecase.UserService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import java.util.List;
 
 @Controller
 public class UserController {
@@ -17,7 +21,9 @@ public class UserController {
         return "index";
     }
     @GetMapping("/user")
-    public String user() {
+    public String user(Model model) {
+        List<User> users = userService.findAll();
+        model.addAttribute("users", users);
         return "user";
     }
     @GetMapping("/admin")

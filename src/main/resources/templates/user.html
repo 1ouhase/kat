@@ -19,47 +19,12 @@
             <p>Her er en liste over nogle af vores fantastiske medlemmer:</p>
         </div>
         <div class="item">
-            <div class="user">
+            <div class="user" th:each="user : ${users}">
                 <img src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small_2x/default-avatar-icon-of-social-media-user-vector.jpg"
                     alt="User Image">
-                <h2>Bruger 1</h2>
-                <h2>bing@bong.com</h2>
-                <p>beskrivelse</p>
-            </div>
-            <div class="user">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small_2x/default-avatar-icon-of-social-media-user-vector.jpg"
-                    alt="User Image">
-                <h2>Bruger 2</h2>
-                <h2>bong@bing.com</h2>
-                <p>beskrivelse</p>
-            </div>
-            <div class="user">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small_2x/default-avatar-icon-of-social-media-user-vector.jpg"
-                    alt="User Image">
-                <h2>Bruger 3</h2>
-                <h2>bing@bing.com</h2>
-                <p>beskrivelse</p>
-            </div>
-            <div class="user">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small_2x/default-avatar-icon-of-social-media-user-vector.jpg"
-                    alt="User Image">
-                <h2>Bruger 4</h2>
-                <h2>bong@bong.com</h2>
-                <p>beskrivelse</p>
-            </div>
-            <div class="user">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small_2x/default-avatar-icon-of-social-media-user-vector.jpg"
-                    alt="User Image">
-                <h2>Bruger 5</h2>
-                <h2>zing@bong.com</h2>
-                <p>beskrivelse</p>
-            </div>
-            <div class="user">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small_2x/default-avatar-icon-of-social-media-user-vector.jpg"
-                    alt="User Image">
-                <h2>Bruger 6</h2>
-                <h2>bing@zong.com</h2>
-                <p>beskrivelse</p>
+                <h2 th:text="${user.getName}">Placeholder</h2>
+                <h2 th:text="${user.getEmail}">bing@bong.com</h2>
+                <p>I love Cats <3</p>
             </div>
         </div>
     </div>

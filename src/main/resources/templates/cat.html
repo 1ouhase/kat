@@ -17,36 +17,11 @@
             <p>Her er en liste over nogle af vores fantastiske katte:</p>
         </div>
         <div class="item">
-            <div class="cat">
+            <div class="cat" th:each="cat:${cats}">
                 <img src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?cs=srgb&dl=pexels-pixabay-104827.jpg&fm=jpg" alt="Cat Image">
-                <h2>Kat 1</h2>
-                <h2>Race: Maine Coon</h2>
-                <h2>alder: 5</h2>
-            </div>
-            <div class="cat">
-                <img src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?cs=srgb&dl=pexels-pixabay-104827.jpg&fm=jpg" alt="Cat Image">
-                <h2>Kat 2</h2>
-                <h2>Race: Siamese</h2>
-            </div>
-            <div class="cat">
-                <img src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?cs=srgb&dl=pexels-pixabay-104827.jpg&fm=jpg" alt="Cat Image">
-                <h2>Kat 3</h2>
-                <h2>Race: Bengal</h2>
-            </div>
-            <div class="cat">
-                <img src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?cs=srgb&dl=pexels-pixabay-104827.jpg&fm=jpg" alt="Cat Image">
-                <h2>Kat 4</h2>
-                <h2>Race: Persian</h2>
-            </div>
-            <div class="cat">
-                <img src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?cs=srgb&dl=pexels-pixabay-104827.jpg&fm=jpg" alt="Cat Image">
-                <h2>Kat 5</h2>
-                <h2>Race: Sphynx</h2>
-            </div>
-            <div class="cat">
-                <img src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?cs=srgb&dl=pexels-pixabay-104827.jpg&fm=jpg" alt="Cat Image">
-                <h2>Kat 6</h2>
-                <h2>Race: Ragdoll</h2>
+                <h2 th:text="${cat.getName()}">placeholder</h2>
+                <h2 th:text="${cat.getRace()}">placeholder</h2>
+                <h2 th:text="${cat.getAge()}">placeholder</h2>
             </div>
         </div>
         <div class="item">
